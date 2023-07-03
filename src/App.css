@@ -1,18 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,11 +13,36 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+h1 {
+  font-family: 'Merriweather', serif;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+}
+
+.appFondo {
+  background-color: #7eb6ad
+}
+
+.colorTituloH1 {
+  color: #0B2954;
+  font-size: calc(1rem + 1vw)
+}
+.colorTituloH2 {
+  color: #0B2954;
+}
+
+.fondoEstrella {
+  background-image: url(imagenes/estrella.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 720px) {
+  .barraResponsive,.imagenBandera,p,.formularioResponsive,h1,h2,h3,h4{
+      width: 100%;
   }
 }
