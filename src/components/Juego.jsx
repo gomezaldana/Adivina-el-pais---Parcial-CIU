@@ -49,7 +49,7 @@ const Juego = () => {
     const [respuestaUsuario, editarRespuestaUsuario] = useState("");
 
     //hook url
-    const [urlPais2, editarUrlPais2] = useState(null);
+    const [urlPais, editarUrlPais] = useState(null);
 
     //hook bandera pais actual
     const [banderaPais, editarBanderaPais] = useState(null);
@@ -57,8 +57,8 @@ const Juego = () => {
     useEffect(() => {
         fetch("https://restcountries.com/v3.1/region/South%20America")
             .then((response) => response.json())
-            .then((urlPais2) => {
-                editarUrlPais2(urlPais2);
+            .then((urlPais) => {
+                editarUrlPais(urlPais);
             })
             .catch((error) => {
                 console.log(error);
@@ -66,12 +66,11 @@ const Juego = () => {
     }, []);
 
     useEffect(() => {
-        if (urlPais2) {
-            editarBanderaPais(urlPais2[numeroPais].flags.png);
-            editarNombrePais(urlPais2[numeroPais].name.common);
-            console.log(urlPais2)
+        if (urlPais) {
+            editarBanderaPais(urlPais[numeroPais].flags.png);
+            editarNombrePais(urlPais[numeroPais].name.common);
         }
-    }, [urlPais2, numeroPais]);
+    }, [urlPais, numeroPais]);
 
     useEffect(() => {
         if (numeroPais) {
@@ -132,7 +131,6 @@ const Juego = () => {
 
     const laRespuestaEsCorrecta = (respuestaUsuario) => {
         if (respuestaUsuario.toLowerCase().trim() === nombreApiPaises.toLowerCase().trim()) {
-            console.log(nombreApiPaises)
             const numeroAPoner = respuestasAcertadas + 1;
             editarRespuestasAcertadas(numeroAPoner);
         }
