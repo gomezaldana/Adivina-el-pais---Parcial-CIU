@@ -8,11 +8,9 @@ function App() {
 
   return (
     <div className='appFondo'>
-      <div className='appCuerpo'>
-        <Header />
-        <Juego />
-        <Footer />
-      </div>
+      <Header />
+      <Juego />
+      <Footer />
     </div>
   );
 }

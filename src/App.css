@@ -1,23 +1,4 @@
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 h1 {
-  font-family: 'Merriweather', serif;
-}
-
-h2 {
   font-family: 'Merriweather', serif;
 }
 
@@ -28,9 +9,6 @@ h2 {
 .colorTituloH1 {
   color: #0B2954;
   font-size: calc(1rem + 1vw)
-}
-.colorTituloH2 {
-  color: #0B2954;
 }
 
 .fondoEstrella {

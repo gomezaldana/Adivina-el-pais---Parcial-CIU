@@ -1,5 +1,7 @@
 import React from 'react';
+
 const BarritaPorcentaje = ({barritaPorcentaje}) => {
+    
     return (
         <div className='pt-3 col-12 barraResponsive'>
             <div className="progress">
